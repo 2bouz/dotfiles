@@ -1,0 +1,49 @@
+set nocompatible
+set ruler
+set encoding=utf-8
+
+"=========================================================
+" Colors
+"=========================================================
+syntax on
+set t_Co=256            " tell the term has 256 colors
+set background=dark
+"colorscheme wombat
+"colorscheme torte
+
+let g:solarized_termcolors=256
+colorscheme solarized
+
+"let g:molokai_original = 0
+
+"=========================================================
+" Tabs and spaces
+"=========================================================
+set softtabstop=4
+set tabstop=4
+set expandtab           " Tab key inserts a series of spaces
+"set nowrap
+"set shiftwidth=2
+"set list listchars=tab:\ \ ,trail:·
+
+"=========================================================
+" Search
+"=========================================================
+
+set ignorecase smartcase " if pattern contains uppercase, search is case sensitive
+set hlsearch             " highlight search
+set incsearch            " show matches halfway typing a pattern
+
+set laststatus=2
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+
+
+
+" Return to last edit position when opening files
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif
