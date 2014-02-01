@@ -14,7 +14,7 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
-"let g:molokai_original = 0
+:autocmd! BufRead,BufNewFile *.less set filetype=css " use css syntax for less file
 
 "=========================================================
 " Tabs and spaces
