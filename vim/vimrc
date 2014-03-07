@@ -1,6 +1,7 @@
 set nocompatible
 set ruler
 set encoding=utf-8
+set directory=/tmp
 
 "=========================================================
 " Colors
